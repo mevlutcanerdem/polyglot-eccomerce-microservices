@@ -16,7 +16,7 @@ public class TokenService{
     }
 
     public void saveToken(String token, String username){
-        redisTemplate.opsForValue().set(token,username,Duration.ofMinutes(30));
+        redisTemplate.opsForValue().set(token,username,Duration.ofMinutes(1));
 
     }
     public void saveRefreshToken(String refToken,String username){
